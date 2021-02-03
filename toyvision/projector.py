@@ -14,7 +14,7 @@ class NormalizedBasis(nn.Module):
         total_dim = int(total_dim)
 
         assert subspace_dim > 0
-        if subspace_dim <= total_dim:
+        if subspace_dim > total_dim:
             print(f"subspace dim {subspace_dim} > total dim {total_dim}")
 
         self.k, self.n = subspace_dim, total_dim
